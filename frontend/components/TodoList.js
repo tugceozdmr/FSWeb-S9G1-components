@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
-export default function TodoList() {
-    return (
-      <div>
-        YapılacaklarListesi (TodoList)
-      </div>
-    )
+export default function TodoList({ list }) {
+  return (
+    <div>
+      <ul>
+        {list.map((todo) => (
+          <li key={todo.id}>
+            {todo.isim} {todo.tamamlandi ? "(ok)" : ""}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
