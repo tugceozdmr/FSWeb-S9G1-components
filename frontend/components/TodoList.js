@@ -1,13 +1,12 @@
 import React from "react";
+import Todo from "./Todo";
 
-export default function TodoList({ list }) {
+export default function TodoList({ list, updateMainState }) {
   return (
     <div>
       <ul>
         {list.map((todo) => (
-          <li key={todo.id}>
-            {todo.isim} {todo.tamamlandi ? "(ok)" : ""}
-          </li>
+          <Todo item={todo} key={todo.id} updateIt={updateMainState} />
         ))}
       </ul>
     </div>

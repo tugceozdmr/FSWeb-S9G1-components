@@ -20,8 +20,9 @@ export default function App() {
     <div>
       Todo App
       <h1>Todos</h1>
-      <TodoList list={todos} />
+      <TodoList list={todos} updateMainState={setTodos} />
       <Form doSubmit={setTodos} current={todos} />
+      <button>yapılmışları gizle</button>
     </div>
   );
 }
