@@ -4,6 +4,7 @@ export default function Form(props) {
   const { doSubmit, current } = props;
 
   const [newToDo, setnewToDo] = useState("");
+  
   const handleChange = (event) => {
     setnewToDo(event.target.value);
   };
@@ -24,13 +25,14 @@ export default function Form(props) {
   return (
     <form onSubmit={handleSubmit}>
       <input
+      className="plc"
         type="text"
         name="newTodo"
         placeholder="type to do"
         onChange={handleChange}
         value={newToDo}
       />
-      <input type="submit" value="ekle" disabled={newToDo === ""} />
+      <input className="but2 "type="submit" value="Add" disabled={newToDo === ""} />
     </form>
   );
 }

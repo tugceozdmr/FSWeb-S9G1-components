@@ -14,15 +14,17 @@ export default function App() {
       id: 1528817084358,
       tamamlandi: true,
     },
-  ]);
+    todos.filter(todoItem => todoItem.tamamlandi === false)
+  ]
+  );
+
 
   return (
     <div>
-      Todo App
       <h1>Todos</h1>
       <TodoList list={todos} updateMainState={setTodos} />
       <Form doSubmit={setTodos} current={todos} />
-      <button>yapılmışları gizle</button>
+      <button className="but">Hide Done </button>
     </div>
   );
 }

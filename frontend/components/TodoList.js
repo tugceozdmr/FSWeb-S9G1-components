@@ -6,7 +6,7 @@ export default function TodoList({ list, updateMainState }) {
     <div>
       <ul>
         {list.map((todo) => (
-          <Todo item={todo} key={todo.id} updateIt={updateMainState} />
+          <Todo item={todo} key={todo.id} updateIt={updateMainState} mevcutlar={list}/>
         ))}
       </ul>
     </div>

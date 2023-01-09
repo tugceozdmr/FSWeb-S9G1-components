@@ -12,7 +12,7 @@ export default function Todo(props) {
 
   return (
     <li className="test" onClick={handleClick}>
-      {item.isim} {item.tamamlandi ? "(ok)" : ""}
+      {item.isim} {item.tamamlandi ? "(✓)" : ""}
     </li>
   );
 }
