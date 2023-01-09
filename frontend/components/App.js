@@ -6,18 +6,16 @@ export default function App() {
   const [todos, setTodos] = useState([
     {
       isim: "Walk The Dog",
-      id: 1528817077286, // farklı görünüyor olabilir, bunu oluşturmak için timestamp(zaman damgası) kullanabilirsiniz
+      id: 1528817077286,
       tamamlandi: false,
     },
     {
       isim: "Learn React",
       id: 1528817084358,
       tamamlandi: true,
-    },
-    todos.filter(todoItem => todoItem.tamamlandi === false)
-  ]
+    }, ]
   );
-
+  todos.filter(todoItem => todoItem.tamamlandi === false)
 
   return (
     <div>
